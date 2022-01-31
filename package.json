@@ -2,6 +2,11 @@
     "name": "Sense-Hat-Simulator",
     "description": "A Node-RED Project",
     "version": "0.0.1",
+    "scripts": {
+        "start": "node node_modules/node-red/red.js --settings=./settings.js flows/flow-mqtt.json",
+        "mqtt": "node node_modules/node-red/red.js --settings=./settings.js flows/flow-mqtt.json",
+        "pusher": "node node_modules/node-red/red.js --settings=./settings.js flows/flow-stream-Pusher.json"
+    },
     "dependencies": {
         "node-red-dashboard": "2.19.4",
         "node-red-contrib-device-stats": "1.1.2",
