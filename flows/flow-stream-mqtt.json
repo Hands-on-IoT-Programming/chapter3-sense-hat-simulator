@@ -21,14 +21,6 @@
         "info": ""
     },
     {
-        "id": "88c78cd7.1e2bb",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Device Stats",
-        "icon": "dashboard",
-        "order": 2
-    },
-    {
         "id": "fee98c91.8a287",
         "type": "ui_base",
         "theme": {
@@ -214,8 +206,8 @@
         "type": "rpi-sensehatsim out",
         "z": "c55415b2.5496e8",
         "name": "",
-        "x": 580,
-        "y": 80,
+        "x": 840,
+        "y": 20,
         "wires": []
     },
     {
