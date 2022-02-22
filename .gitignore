@@ -1,3 +1,4 @@
 *.backup
 flow_cred.json
 node_modules
+data
