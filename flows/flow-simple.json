@@ -1,8 +1,15 @@
 [
     {
+        "id": "2342fb3e.4ee274",
+        "type": "tab",
+        "label": "Basic flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "c55415b2.5496e8",
         "type": "tab",
-        "label": "Sense hat",
+        "label": "Visualization",
         "disabled": false,
         "info": ""
     },
@@ -327,7 +334,8 @@
         "wires": [
             [
                 "c7d19276.c1eee",
-                "81ca4f01.0f00b"
+                "81ca4f01.0f00b",
+                "a291128b.7c5d98"
             ]
         ]
     },
@@ -373,8 +381,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "x": 730,
         "y": 220,
         "wires": []
@@ -615,6 +623,116 @@
         "targetType": "full",
         "x": 840,
         "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a291128b.7c5d98",
+        "type": "debug",
+        "z": "c55415b2.5496e8",
+        "name": "temperature",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 850,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "615f02d5.30b37c",
+        "type": "rpi-sensehatsim in",
+        "z": "2342fb3e.4ee274",
+        "name": "",
+        "motion": false,
+        "env": true,
+        "stick": true,
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "10f578bb.0b16a7"
+            ]
+        ]
+    },
+    {
+        "id": "7213ecb9.f142e4",
+        "type": "inject",
+        "z": "2342fb3e.4ee274",
+        "name": "",
+        "topic": "",
+        "payload": "0,0,red,0,7,#00ff00,7,7,yellow,7,0,0,0,255",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "d5577600.5afd48",
+                "d5a36d6c.8207b"
+            ]
+        ]
+    },
+    {
+        "id": "a98cf93d.c9716",
+        "type": "comment",
+        "z": "2342fb3e.4ee274",
+        "name": "LED matrix",
+        "info": "",
+        "x": 140,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "dd4810e0.ee4bf8",
+        "type": "comment",
+        "z": "2342fb3e.4ee274",
+        "name": "Temperature, humidity, pressure",
+        "info": "",
+        "x": 190,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d5577600.5afd48",
+        "type": "rpi-sensehatsim out",
+        "z": "2342fb3e.4ee274",
+        "name": "",
+        "x": 500,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "10f578bb.0b16a7",
+        "type": "debug",
+        "z": "2342fb3e.4ee274",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 490,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d5a36d6c.8207b",
+        "type": "debug",
+        "z": "2342fb3e.4ee274",
+        "name": "LED input",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 400,
+        "y": 280,
         "wires": []
     }
 ]
