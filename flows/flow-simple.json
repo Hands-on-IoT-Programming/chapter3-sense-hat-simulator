@@ -153,34 +153,6 @@
         "collapse": false
     },
     {
-        "id": "fe2d9fce.9915c",
-        "type": "rpi-sensehatsim in",
-        "z": "c55415b2.5496e8",
-        "name": "",
-        "motion": false,
-        "env": true,
-        "stick": true,
-        "x": 300,
-        "y": 460,
-        "wires": [
-            [
-                "877ab1e.24d315",
-                "45ef1b19.bdeea4",
-                "b3da5168.9f27f",
-                "5611ec68.c97794"
-            ]
-        ]
-    },
-    {
-        "id": "6f1c8c76.43a934",
-        "type": "rpi-sensehatsim out",
-        "z": "c55415b2.5496e8",
-        "name": "",
-        "x": 580,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "f1b68794.a4c1b8",
         "type": "debug",
         "z": "c55415b2.5496e8",
@@ -641,22 +613,6 @@
         "wires": []
     },
     {
-        "id": "615f02d5.30b37c",
-        "type": "rpi-sensehatsim in",
-        "z": "2342fb3e.4ee274",
-        "name": "",
-        "motion": false,
-        "env": true,
-        "stick": true,
-        "x": 220,
-        "y": 100,
-        "wires": [
-            [
-                "10f578bb.0b16a7"
-            ]
-        ]
-    },
-    {
         "id": "7213ecb9.f142e4",
         "type": "inject",
         "z": "2342fb3e.4ee274",
@@ -698,25 +654,17 @@
         "wires": []
     },
     {
-        "id": "d5577600.5afd48",
-        "type": "rpi-sensehatsim out",
-        "z": "2342fb3e.4ee274",
-        "name": "",
-        "x": 500,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "10f578bb.0b16a7",
         "type": "debug",
         "z": "2342fb3e.4ee274",
-        "name": "",
-        "active": false,
+        "name": "Output",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
-        "x": 490,
+        "complete": "true",
+        "targetType": "full",
+        "x": 470,
         "y": 100,
         "wires": []
     },
@@ -733,6 +681,59 @@
         "targetType": "msg",
         "x": 400,
         "y": 280,
+        "wires": []
+    },
+    {
+        "id": "fe2d9fce.9915c",
+        "type": "rpi-sensehatsim in",
+        "z": "c55415b2.5496e8",
+        "name": "",
+        "motion": false,
+        "env": true,
+        "stick": true,
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "877ab1e.24d315",
+                "45ef1b19.bdeea4",
+                "b3da5168.9f27f",
+                "5611ec68.c97794"
+            ]
+        ]
+    },
+    {
+        "id": "615f02d5.30b37c",
+        "type": "rpi-sensehatsim in",
+        "z": "2342fb3e.4ee274",
+        "name": "",
+        "motion": false,
+        "env": true,
+        "stick": true,
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "10f578bb.0b16a7"
+            ]
+        ]
+    },
+    {
+        "id": "6f1c8c76.43a934",
+        "type": "rpi-sensehatsim out",
+        "z": "c55415b2.5496e8",
+        "name": "",
+        "x": 580,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d5577600.5afd48",
+        "type": "rpi-sensehatsim out",
+        "z": "2342fb3e.4ee274",
+        "name": "",
+        "x": 500,
+        "y": 220,
         "wires": []
     }
 ]
