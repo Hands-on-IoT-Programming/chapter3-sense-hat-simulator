@@ -5,13 +5,11 @@
     "scripts": {
         "start": "node node_modules/node-red/red.js --settings=./settings.js flows/flow-simple.json",
         "workflows": "node node_modules/node-red/red.js --settings=./settings.js flows/flow-workflows.json",
-        "mqtt": "node node_modules/node-red/red.js --settings=./settings.js flows/flow-stream-mqtt.json",
-        "pusher": "node node_modules/node-red/red.js --settings=./settings.js flows/flow-stream-Pusher.json"
+        "mqtt": "node node_modules/node-red/red.js --settings=./settings.js flows/flow-stream-mqtt.json"
     },
     "dependencies": {
         "node-red": "~1.0.4",
         "node-red-dashboard": "2.19.4",
-        "node-red-node-pi-sense-hat-simulator": "0.0.1",
         "node-red-node-pusher": "0.1.0",
         "node-red-contrib-throttle": "0.1.6"
     },
