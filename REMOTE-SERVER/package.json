@@ -11,7 +11,8 @@
         "node-red-admin": "~0.1.5",
         "node-red-dashboard": "2.19.4",
         "node-red-contrib-buffer-array": "~1.1.0",
-        "node-red-contrib-statistics": "~2.2.2"
+        "node-red-contrib-statistics": "~2.2.2",
+        "node-red-contrib-interval-length": "0.0.4"
     },
     "node-red": {
         "settings": {
