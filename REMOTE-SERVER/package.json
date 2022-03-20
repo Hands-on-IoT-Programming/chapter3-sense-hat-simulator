@@ -1,0 +1,22 @@
+{
+    "name": "Sense-Hat-Simulator",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "scripts": {
+        "subscriber": "node node_modules/node-red/red.js --settings=./settings.js --port 2880 flows/flow-subscriber.json",
+        "processing": "node node_modules/node-red/red.js --settings=./settings.js --port 2880 flows/flow-processing.json"
+    },
+    "dependencies": {
+        "node-red": "~1.0.4",
+        "node-red-admin": "~0.1.5",
+        "node-red-dashboard": "2.19.4",
+        "node-red-contrib-buffer-array": "~1.1.0",
+        "node-red-contrib-statistics": "~2.2.2"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    }
+}
