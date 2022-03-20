@@ -1,0 +1,109 @@
+[
+    {
+        "id": "96479688.095058",
+        "type": "tab",
+        "label": "MQTT subscriber",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b4cc42c8.1780c",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "3615ea2a.064816",
+        "type": "debug",
+        "z": "96479688.095058",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 470,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d725feac.21084",
+        "type": "mqtt in",
+        "z": "96479688.095058",
+        "name": "",
+        "topic": "sensehat/sensors",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "b4cc42c8.1780c",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "3615ea2a.064816",
+                "5a359749.893c58"
+            ]
+        ]
+    },
+    {
+        "id": "5a359749.893c58",
+        "type": "interval-length",
+        "z": "96479688.095058",
+        "format": "mills",
+        "bytopic": false,
+        "minimum": "",
+        "maximum": "",
+        "window": "",
+        "timeout": false,
+        "msgTimeout": "",
+        "minimumunit": "msecs",
+        "maximumunit": "msecs",
+        "windowunit": "msecs",
+        "msgTimeoutUnit": "msecs",
+        "reset": false,
+        "startup": false,
+        "msgField": "payload",
+        "timestampField": "timestamp",
+        "repeatTimeout": false,
+        "name": "",
+        "x": 500,
+        "y": 120,
+        "wires": [
+            [
+                "f848d8a9.c462e8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f848d8a9.c462e8",
+        "type": "debug",
+        "z": "96479688.095058",
+        "name": "Last INTERVAL",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 720,
+        "y": 120,
+        "wires": []
+    }
+]
