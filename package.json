@@ -10,6 +10,7 @@
     "dependencies": {
         "node-red": "~1.0.4",
         "node-red-admin": "~0.1.5",
+        "node-red-contrib-throttle": "^0.1.7",
         "node-red-dashboard": "2.19.4"
     },
     "node-red": {
