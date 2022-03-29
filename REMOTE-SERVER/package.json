@@ -4,7 +4,8 @@
     "version": "0.0.1",
     "scripts": {
         "subscriber": "node node_modules/node-red/red.js --settings=./settings.js --port 3000 flows/flow-subscriber.json",
-        "processing": "node node_modules/node-red/red.js --settings=./settings.js --port 3000 flows/flow-processing.json"
+        "processing": "node node_modules/node-red/red.js --settings=./settings.js --port 3000 flows/flow-processing.json",
+        "states": "node node_modules/node-red/red.js --settings=./settings.js --port 3000 flows/flow-state.json"
     },
     "dependencies": {
         "node-red": "~1.0.4",
