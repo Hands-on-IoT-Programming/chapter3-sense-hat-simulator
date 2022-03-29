@@ -3,7 +3,7 @@
     "description": "A Node-RED Project",
     "version": "0.0.1",
     "scripts": {
-        "start": "node node_modules/node-red/red.js --settings=./settings.js flows/flow.json"
+        "start": "node node_modules/node-red/red.js --settings=./settings.js --port 2000 flows/flow.json"
     },
     "dependencies": {
         "node-red": "~1.0.4",
