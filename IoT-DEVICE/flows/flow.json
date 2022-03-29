@@ -59,7 +59,8 @@
         "y": 120,
         "wires": [
             [
-                "d1777147.76cbe"
+                "d1777147.76cbe",
+                "f43c61e8.d762a"
             ]
         ]
     },
@@ -74,6 +75,20 @@
         "broker": "379c15d1.3c458a",
         "x": 630,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f43c61e8.d762a",
+        "type": "debug",
+        "z": "bffa10b7.2a865",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 60,
         "wires": []
     }
 ]
