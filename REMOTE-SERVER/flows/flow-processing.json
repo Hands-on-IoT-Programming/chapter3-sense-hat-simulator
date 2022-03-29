@@ -7,6 +7,20 @@
         "info": ""
     },
     {
+        "id": "436ca787.f08538",
+        "type": "tab",
+        "label": "Basic statistics (to fill)",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8d4c2557.9ea5a",
+        "type": "tab",
+        "label": "Visualization (to fill)",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "b4cc42c8.1780c",
         "type": "mqtt-broker",
         "z": "",
@@ -33,7 +47,7 @@
         "type": "debug",
         "z": "96479688.095058",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -96,13 +110,33 @@
         "type": "debug",
         "z": "96479688.095058",
         "name": "Last INTERVAL",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
         "x": 720,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b73a6fa.4238e9",
+        "type": "comment",
+        "z": "436ca787.f08538",
+        "name": "Add here the part of the BASIC STATISTICS tab regarding mean and standard deviation",
+        "info": "",
+        "x": 440,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "219ace88.89d0fa",
+        "type": "comment",
+        "z": "8d4c2557.9ea5a",
+        "name": "Place here the visualization flow for the basic statistics",
+        "info": "",
+        "x": 460,
         "y": 120,
         "wires": []
     }
