@@ -7,16 +7,30 @@
         "info": ""
     },
     {
-        "id": "436ca787.f08538",
+        "id": "bd3f69f4.67e52",
         "type": "tab",
         "label": "Basic statistics (to fill)",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "8d4c2557.9ea5a",
+        "id": "436ca787.f08538",
+        "type": "tab",
+        "label": "Basic statistics [solution]",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5ce883bb.8bd6ec",
         "type": "tab",
         "label": "Visualization (to fill)",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8d4c2557.9ea5a",
+        "type": "tab",
+        "label": "Visualization [solution]",
         "disabled": false,
         "info": ""
     },
@@ -41,6 +55,145 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "efb07e2b.3995a8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Temperature",
+        "tab": "884b8d9a.e7c948",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fa3c62f8.1c82c8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Humidity",
+        "tab": "884b8d9a.e7c948",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ff9bd214.8eedd",
+        "type": "ui_group",
+        "z": "",
+        "name": "Pressure",
+        "tab": "884b8d9a.e7c948",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "884b8d9a.e7c948",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Sense Hat",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "cac3ecd7.acf168",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
     },
     {
         "id": "3615ea2a.064816",
@@ -71,7 +224,9 @@
         "wires": [
             [
                 "3615ea2a.064816",
-                "5a359749.893c58"
+                "5a359749.893c58",
+                "cdd799f2.7471e8",
+                "3b5c4ce2.12c4f4"
             ]
         ]
     },
@@ -110,7 +265,7 @@
         "type": "debug",
         "z": "96479688.095058",
         "name": "Last INTERVAL",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -131,13 +286,620 @@
         "wires": []
     },
     {
-        "id": "219ace88.89d0fa",
-        "type": "comment",
+        "id": "bc9bf4d9.3cee88",
+        "type": "change",
+        "z": "436ca787.f08538",
+        "name": "temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperature",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "89dc5845.e978f",
+                "3da0c56c.118dba"
+            ]
+        ]
+    },
+    {
+        "id": "2093d834.84636",
+        "type": "statistics",
+        "z": "436ca787.f08538",
+        "name": "statistics over 10",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 450,
+        "y": 300,
+        "wires": [
+            [
+                "ce56f642.958a08",
+                "9a291b9d.1cea"
+            ]
+        ]
+    },
+    {
+        "id": "ce56f642.958a08",
+        "type": "debug",
+        "z": "436ca787.f08538",
+        "name": "AVERAGE temperature (last 10)",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 810,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "ae3c3fa2.4efb7",
+        "type": "debug",
+        "z": "436ca787.f08538",
+        "name": "STANDARD DEV temperature (last 10)",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 790,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "79aec30f.9f73fc",
+        "type": "statistics",
+        "z": "436ca787.f08538",
+        "name": "statistics over 10",
+        "dataSetSize": "10",
+        "inputField": "payload",
+        "inputFieldType": "msg",
+        "resultField": "payload",
+        "resultFieldType": "msg",
+        "parameterField": "",
+        "parameterFieldType": "msg",
+        "stripFunction": false,
+        "resultOnly": true,
+        "x": 510,
+        "y": 420,
+        "wires": [
+            [
+                "ae3c3fa2.4efb7",
+                "8784e30f.bc6ef8"
+            ]
+        ]
+    },
+    {
+        "id": "fe6dd8d8.4b2c48",
+        "type": "function",
+        "z": "436ca787.f08538",
+        "name": "mean",
+        "func": "msg.topic=\"mean\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "2093d834.84636"
+            ]
+        ]
+    },
+    {
+        "id": "fcde895b.745de8",
+        "type": "function",
+        "z": "436ca787.f08538",
+        "name": "standardDeviation",
+        "func": "msg.topic=\"standardDeviation\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "79aec30f.9f73fc"
+            ]
+        ]
+    },
+    {
+        "id": "89dc5845.e978f",
+        "type": "buffer-array",
+        "z": "436ca787.f08538",
+        "name": "",
+        "bufferLen": "10",
+        "startWhenFilled": false,
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "fe6dd8d8.4b2c48",
+                "fcde895b.745de8",
+                "36f52ae6.c2c596"
+            ]
+        ]
+    },
+    {
+        "id": "3da0c56c.118dba",
+        "type": "link out",
+        "z": "436ca787.f08538",
+        "name": "Instant output",
+        "links": [
+            "cabe4cb6.aac56"
+        ],
+        "x": 635,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9a291b9d.1cea",
+        "type": "link out",
+        "z": "436ca787.f08538",
+        "name": "Mean output",
+        "links": [
+            "1a891bc0.364b14"
+        ],
+        "x": 635,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8784e30f.bc6ef8",
+        "type": "link out",
+        "z": "436ca787.f08538",
+        "name": "Standard deviation output",
+        "links": [
+            "82fa32a6.17213"
+        ],
+        "x": 635,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "42dab631.ce05d8",
+        "type": "debug",
+        "z": "96479688.095058",
+        "name": "parsed",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 650,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "cdd799f2.7471e8",
+        "type": "function",
+        "z": "96479688.095058",
+        "name": "JSON parse",
+        "func": "msg = {\n    payload: JSON.parse(msg.payload)\n    };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 240,
+        "wires": [
+            [
+                "42dab631.ce05d8",
+                "81b6dc04.935368"
+            ]
+        ]
+    },
+    {
+        "id": "81b6dc04.935368",
+        "type": "link out",
+        "z": "96479688.095058",
+        "name": "mqtt data out",
+        "links": [
+            "b0e71ae0.88b6c8",
+            "1610cd1e.776d2b"
+        ],
+        "x": 700,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b0e71ae0.88b6c8",
+        "type": "link in",
+        "z": "436ca787.f08538",
+        "name": "mqtt data in",
+        "links": [
+            "81b6dc04.935368"
+        ],
+        "x": 75,
+        "y": 220,
+        "wires": [
+            [
+                "bc9bf4d9.3cee88"
+            ]
+        ]
+    },
+    {
+        "id": "36f52ae6.c2c596",
+        "type": "debug",
+        "z": "436ca787.f08538",
+        "name": "buffer",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 290,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "698010f6.1d2278",
+        "type": "ui_chart",
         "z": "8d4c2557.9ea5a",
+        "name": "Temperature",
+        "group": "efb07e2b.3995a8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "ºC",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "60",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "301f634a.698344",
+        "type": "ui_gauge",
+        "z": "8d4c2557.9ea5a",
+        "name": "Temperature",
+        "group": "efb07e2b.3995a8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "100",
+        "x": 650,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4266a6af.a6a28",
+        "type": "change",
+        "z": "8d4c2557.9ea5a",
+        "name": "Temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperature",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "temperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "698010f6.1d2278",
+                "301f634a.698344"
+            ]
+        ]
+    },
+    {
+        "id": "b44e50cb.fa1d2",
+        "type": "ui_chart",
+        "z": "8d4c2557.9ea5a",
+        "name": "Humidity",
+        "group": "fa3c62f8.1c82c8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "%",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "60",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "886bdbd9.816e7",
+        "type": "ui_gauge",
+        "z": "8d4c2557.9ea5a",
+        "name": "Humidity",
+        "group": "fa3c62f8.1c82c8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "100",
+        "x": 640,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3ceea087.763528",
+        "type": "change",
+        "z": "8d4c2557.9ea5a",
+        "name": "Humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.humidity",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "humidity",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
+                "b44e50cb.fa1d2",
+                "886bdbd9.816e7"
+            ]
+        ]
+    },
+    {
+        "id": "3fd1aec5.b61e5a",
+        "type": "ui_chart",
+        "z": "8d4c2557.9ea5a",
+        "name": "",
+        "group": "ff9bd214.8eedd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "mbar",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "1100",
+        "removeOlder": "60",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "445973bf.9cb134",
+        "type": "ui_gauge",
+        "z": "8d4c2557.9ea5a",
+        "name": "Pressure",
+        "group": "ff9bd214.8eedd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "mbar",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "100",
+        "x": 640,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a542c99c.4797e",
+        "type": "change",
+        "z": "8d4c2557.9ea5a",
+        "name": "Pressure",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.pressure",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pressure",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 500,
+        "wires": [
+            [
+                "3fd1aec5.b61e5a",
+                "445973bf.9cb134"
+            ]
+        ]
+    },
+    {
+        "id": "1610cd1e.776d2b",
+        "type": "link in",
+        "z": "8d4c2557.9ea5a",
+        "name": "mqtt data visualization",
+        "links": [
+            "81b6dc04.935368"
+        ],
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "4266a6af.a6a28",
+                "3ceea087.763528",
+                "a542c99c.4797e"
+            ]
+        ]
+    },
+    {
+        "id": "d2711dda.8560e8",
+        "type": "comment",
+        "z": "5ce883bb.8bd6ec",
         "name": "Place here the visualization flow for the basic statistics",
         "info": "",
-        "x": 460,
-        "y": 120,
+        "x": 500,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3b5c4ce2.12c4f4",
+        "type": "debug",
+        "z": "96479688.095058",
+        "name": "raw",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 370,
+        "y": 320,
         "wires": []
     }
 ]
