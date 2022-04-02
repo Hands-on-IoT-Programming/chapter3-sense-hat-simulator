@@ -36,39 +36,6 @@
         "willPayload": ""
     },
     {
-        "id": "873699be.106688",
-        "type": "ui_group",
-        "z": "",
-        "name": "Temperature",
-        "tab": "7f536353.522694",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "a84da3c6.a905",
-        "type": "ui_group",
-        "z": "",
-        "name": "Humidity",
-        "tab": "7f536353.522694",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "25ddfe8.d86bf82",
-        "type": "ui_group",
-        "z": "",
-        "name": "Pressure",
-        "tab": "7f536353.522694",
-        "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "7f536353.522694",
         "type": "ui_tab",
         "z": "",
@@ -175,74 +142,6 @@
         }
     },
     {
-        "id": "8583fa89.a7aff8",
-        "type": "ui_chart",
-        "z": "436ca787.f08538",
-        "name": "Temperature",
-        "group": "873699be.106688",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "ºC",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": true,
-        "ymin": "0",
-        "ymax": "50",
-        "removeOlder": "60",
-        "removeOlderPoints": "100",
-        "removeOlderUnit": "1",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "useOldStyle": false,
-        "outputs": 1,
-        "x": 850,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2d5c41ec.8183ce",
-        "type": "ui_gauge",
-        "z": "436ca787.f08538",
-        "name": "Temperature",
-        "group": "873699be.106688",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "",
-        "label": "ºC",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "50",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "50",
-        "seg2": "100",
-        "x": 850,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "e2121ad6.7f70e8",
         "type": "change",
         "z": "436ca787.f08538",
@@ -272,79 +171,9 @@
         "y": 100,
         "wires": [
             [
-                "8583fa89.a7aff8",
-                "2d5c41ec.8183ce",
                 "524d5ec1.0394a8"
             ]
         ]
-    },
-    {
-        "id": "f5d2afe0.db55d8",
-        "type": "ui_chart",
-        "z": "436ca787.f08538",
-        "name": "Humidity",
-        "group": "a84da3c6.a905",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "%",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": true,
-        "ymin": "0",
-        "ymax": "100",
-        "removeOlder": "60",
-        "removeOlderPoints": "100",
-        "removeOlderUnit": "1",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "useOldStyle": false,
-        "outputs": 1,
-        "x": 860,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b9b3c131.e67d",
-        "type": "ui_gauge",
-        "z": "436ca787.f08538",
-        "name": "Humidity",
-        "group": "a84da3c6.a905",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "50",
-        "seg2": "100",
-        "x": 860,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "d490945c.7f94f8",
@@ -376,79 +205,9 @@
         "y": 220,
         "wires": [
             [
-                "b9b3c131.e67d",
-                "f5d2afe0.db55d8",
                 "289f73e9.8cc0c4"
             ]
         ]
-    },
-    {
-        "id": "f4fd3c35.a5f278",
-        "type": "ui_chart",
-        "z": "436ca787.f08538",
-        "name": "",
-        "group": "25ddfe8.d86bf82",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "mbar",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": true,
-        "ymin": "0",
-        "ymax": "1100",
-        "removeOlder": "60",
-        "removeOlderPoints": "100",
-        "removeOlderUnit": "1",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "useOldStyle": false,
-        "outputs": 1,
-        "x": 870,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4e799897.d44a18",
-        "type": "ui_gauge",
-        "z": "436ca787.f08538",
-        "name": "Pressure",
-        "group": "25ddfe8.d86bf82",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "",
-        "label": "mbar",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "50",
-        "seg2": "100",
-        "x": 860,
-        "y": 440,
-        "wires": []
     },
     {
         "id": "c0b81d4d.c377b8",
@@ -480,8 +239,6 @@
         "y": 400,
         "wires": [
             [
-                "f4fd3c35.a5f278",
-                "4e799897.d44a18",
                 "d0c60385.a8368"
             ]
         ]
@@ -561,8 +318,8 @@
         "func": "global.set('temperature' , msg.payload)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 830,
-        "y": 140,
+        "x": 750,
+        "y": 100,
         "wires": [
             [
                 "1b315e7d.957e2a"
@@ -580,8 +337,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1030,
-        "y": 140,
+        "x": 950,
+        "y": 100,
         "wires": []
     },
     {
@@ -592,8 +349,8 @@
         "func": "global.set('humidity' , msg.payload)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 840,
-        "y": 320,
+        "x": 740,
+        "y": 220,
         "wires": [
             [
                 "4e3fa949.6a5958"
@@ -611,8 +368,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1020,
-        "y": 320,
+        "x": 920,
+        "y": 220,
         "wires": []
     },
     {
@@ -623,8 +380,8 @@
         "func": "global.set('pressure' , msg.payload)\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 840,
-        "y": 500,
+        "x": 740,
+        "y": 400,
         "wires": [
             [
                 "ddb07fea.fd5568"
@@ -642,8 +399,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1020,
-        "y": 500,
+        "x": 920,
+        "y": 400,
         "wires": []
     },
     {
